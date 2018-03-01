@@ -18,32 +18,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Jxf-Wn-zmu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Jxf-Wn-zmu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TextView" translatesAutoresizingMaskIntoConstraints="NO" id="5z8-4h-lu5">
-                                <rect key="frame" x="16" y="48" width="343" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextView" translatesAutoresizingMaskIntoConstraints="NO" id="5z8-4h-lu5">
+                                <rect key="frame" x="0.0" y="89" width="375" height="106"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Number Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="AGO-dg-QeS">
-                                <rect key="frame" x="16" y="162" width="343" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Number Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="AGO-dg-QeS">
+                                <rect key="frame" x="0.0" y="225" width="375" height="184"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQx-PR-3ee">
                                 <rect key="frame" x="0.0" y="561" width="193" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Plus Button"/>
+                                <connections>
+                                    <action selector="PlusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DbK-fh-gIa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG8-N4-ArG">
                                 <rect key="frame" x="182" y="561" width="193" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Minus Button"/>
+                                <connections>
+                                    <action selector="MinusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aFi-FA-EyL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYP-nI-aen">
+                                <rect key="frame" x="130" y="258" width="115.5" height="119.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" red="0.38823529411764707" green="0.74509803921568629" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWO-wc-bMo">
+                                <rect key="frame" x="103" y="121" width="168" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.38823529411764707" green="0.74509803921568629" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="bottom" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fd-dK-8Tc">
+                                <rect key="frame" x="307" y="26" width="68" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Settings Rectangle"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPF-g9-rDJ">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LWO-wc-bMo" firstAttribute="centerY" secondItem="5z8-4h-lu5" secondAttribute="centerY" id="3h3-Ky-2cg"/>
+                            <constraint firstItem="AGO-dg-QeS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8ed-pg-E7D"/>
+                            <constraint firstItem="LWO-wc-bMo" firstAttribute="centerX" secondItem="5z8-4h-lu5" secondAttribute="centerX" id="Fvk-lb-Cwf"/>
+                            <constraint firstItem="AGO-dg-QeS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PaK-n1-Pd7"/>
+                            <constraint firstItem="5z8-4h-lu5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="Ped-Fq-rW9"/>
+                            <constraint firstItem="AGO-dg-QeS" firstAttribute="top" secondItem="5z8-4h-lu5" secondAttribute="bottom" constant="30" id="QzW-fT-Z2b"/>
+                            <constraint firstItem="5z8-4h-lu5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YOc-u2-Xlz"/>
+                            <constraint firstItem="HYP-nI-aen" firstAttribute="centerX" secondItem="AGO-dg-QeS" secondAttribute="centerX" id="afY-7y-xD1"/>
+                            <constraint firstItem="5z8-4h-lu5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dBl-5V-GkY"/>
+                            <constraint firstItem="HYP-nI-aen" firstAttribute="centerY" secondItem="AGO-dg-QeS" secondAttribute="centerY" id="klR-Yo-Z1M"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="LWO-wc-bMo" id="Obv-IF-GYC"/>
+                        <outlet property="numberLabel" destination="HYP-nI-aen" id="kY6-gO-4jj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,6 +97,7 @@
         <image name="Minus Button" width="193" height="106"/>
         <image name="Number Rectangle" width="385" height="184"/>
         <image name="Plus Button" width="193" height="106"/>
+        <image name="Settings Rectangle" width="89" height="53"/>
         <image name="TextView" width="385" height="106"/>
     </resources>
 </document>
