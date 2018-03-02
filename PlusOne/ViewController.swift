@@ -8,16 +8,22 @@
 
 import UIKit
 
+var counter = 0
+
 class ViewController: UIViewController {
     
-    var counter = 0
     
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        numberLabel.text = String(counter)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        numberLabel.text = String(counter)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,11 +40,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func MinusButton(_ sender: UIButton) {
-        counter -= 1
-        numberLabel.text = String(counter)
-        //Taptic feedback
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.warning)
+        if counter > 0 {
+            counter -= 1
+            numberLabel.text = String(counter)
+            //Taptic feedback
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
+        }else {
+            //Taptic feedback
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.error)
+        }
+    }
+    
+    @IBAction func settingsButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "segue", sender: self)
     }
     
 }
