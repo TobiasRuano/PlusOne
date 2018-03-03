@@ -15,16 +15,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet var myGradientView: GradientView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         numberLabel.text = String(counter)
-//        self.view.backgroundColor = UIColor.white
     }
     
     override func viewWillAppear(_ animated: Bool) {
         numberLabel.text = String(counter)
         nameLabel.text = name
+        if UserDefaults.standard.value(forKey: "StartColor") != nil {
+            let startColor = UserDefaults.standard.colorForKey(key: "StartColor")
+            let endColor = UserDefaults.standard.colorForKey(key: "EndColor")
+            myGradientView.StartColor = startColor!
+            myGradientView.EndColor = endColor!
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

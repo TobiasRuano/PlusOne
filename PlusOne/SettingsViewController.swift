@@ -11,13 +11,16 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var colorFondo: UIColor = UIColor.green
+    @IBOutlet var myGradientView: GradientView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        background.isHidden = true
-//        colorFondo = UserDefaults.standard.colorForKey(key: "fondo")!
-//        view.backgroundColor = colorFondo
+        if UserDefaults.standard.value(forKey: "StartColor") != nil {
+            let startColor = UserDefaults.standard.colorForKey(key: "StartColor")
+            let endColor = UserDefaults.standard.colorForKey(key: "EndColor")
+            myGradientView.StartColor = startColor!
+            myGradientView.EndColor = endColor!
+        }
     }
     
     @IBAction func doneButton(_ sender: UIButton) {
@@ -32,40 +35,37 @@ class SettingsViewController: UIViewController {
         generator.notificationOccurred(.success)
         self.dismiss(animated: true, completion: nil)
     }
-    //TODO: function to change the background
-    func changeBackground(color: UIColor) {
-        view.backgroundColor = color
-//        let homeVC = ViewController()
-//        var homebackground =  homeVC.view.backgroundColor
-//        homebackground = color
-        colorFondo = color
-        UserDefaults.standard.setColor(color: color, forKey: "fondo")
-    }
-    
-    @IBOutlet weak var background: UIImageView!
-    
     
     // Change the background Color
     @IBAction func ColorOneButton(_ sender: UIButton) {
-        let color = UIColor(red: 128/255.0, green: 195/255.0, blue: 243/255.0, alpha: 1.0)
-        changeBackground(color: color)
-        
+        myGradientView.StartColor = UIColor(displayP3Red: 128/255, green: 195/255, blue: 243/255, alpha: 1.0)
+        myGradientView.EndColor = UIColor(displayP3Red: 74/255, green: 144/255, blue: 226/255, alpha: 1.0)
+        UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
+        UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
     }
     @IBAction func ColorTwoButton(_ sender: UIButton) {
-        let color = UIColor(red: 128/255.0, green: 195/255.0, blue: 243/255.0, alpha: 1.0)
-        changeBackground(color: color)
+        myGradientView.StartColor = UIColor(displayP3Red: 181/255, green: 235/255, blue: 69/255, alpha: 1.0)
+        myGradientView.EndColor = UIColor(displayP3Red: 126/255, green: 211/255, blue: 33/255, alpha: 1.0)
+        UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
+        UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
     }
     @IBAction func ColorThreeButton(_ sender: UIButton) {
-        let color = UIColor(red: 224/255.0, green: 36/255.0, blue: 242/255.0, alpha: 1.0)
-        changeBackground(color: color)
+        myGradientView.StartColor = UIColor(displayP3Red: 224/255, green: 36/255, blue: 242/255, alpha: 1.0)
+        myGradientView.EndColor = UIColor(displayP3Red: 189/255, green: 16/255, blue: 224/255, alpha: 1.0)
+        UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
+        UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
     }
     @IBAction func ColorFourButton(_ sender: UIButton) {
-        let color = UIColor(red: 128/255.0, green: 195/255.0, blue: 243/255.0, alpha: 1.0)
-        changeBackground(color: color)
+        myGradientView.StartColor = UIColor(displayP3Red: 250/255, green: 217/255, blue: 97/255, alpha: 1.0)
+        myGradientView.EndColor = UIColor(displayP3Red: 247/255, green: 107/255, blue: 28/255, alpha: 1.0)
+        UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
+        UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
     }
-    @IBAction func OtiginalcolorButton(_ sender: Any) {
-        let color = UIColor(red: 128/255.0, green: 195/255.0, blue: 243/255.0, alpha: 1.0)
-        changeBackground(color: color)
+    @IBAction func OtiginalcolorButton(_ sender: UIButton) {
+        myGradientView.StartColor = UIColor(displayP3Red: 48/255, green: 35/255, blue: 174/255, alpha: 1.0)
+        myGradientView.EndColor = UIColor(displayP3Red: 200/255, green: 109/255, blue: 215/255, alpha: 1.0)
+        UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
+        UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
     }
     
 }
