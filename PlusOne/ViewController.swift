@@ -9,21 +9,29 @@
 import UIKit
 
 var counter = 0
+var name = ""
 
 class ViewController: UIViewController {
-    
     
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         numberLabel.text = String(counter)
+//        self.view.backgroundColor = UIColor.white
     }
     
     override func viewWillAppear(_ animated: Bool) {
         numberLabel.text = String(counter)
+        nameLabel.text = name
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if name == "" {
+            name = user()
+            nameLabel.text = name
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,11 +53,64 @@ class ViewController: UIViewController {
             numberLabel.text = String(counter)
             //Taptic feedback
             let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(.warning)
+            generator.notificationOccurred(.success)
         }else {
             //Taptic feedback
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.error)
+        }
+    }
+    
+    func createAlert(tittle: String, message: String){
+        
+        let alert = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated:  true, completion: nil)
+    }
+    
+    
+    func user() -> String {
+        var tField: UITextField!
+        
+        func configurationTextField(textField: UITextField!)
+        {
+            print("generating the TextField")
+            textField.placeholder = "Enter an item"
+            textField.textAlignment = .center
+            tField = textField
+        }
+        
+        func handleCancel(alertView: UIAlertAction!)
+        {
+            print("Cancelled !!")
+        }
+        
+        let alert = UIAlertController(title: "What do you need to count?", message: "", preferredStyle: .alert)
+        
+        alert.addTextField(configurationHandler: configurationTextField)
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler:{ (UIAlertAction) in
+            print("Done !!")
+            
+            print("Item : \(String(describing: tField.text))")
+            name = tField.text!
+            self.nameLabel.text = name
+            
+            //Guardo el nombre
+//            UserDefaults.standard.set(self.nombre, forKey: "name")
+            
+        }))
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+        print(name)
+        
+        if tField.text == nil {
+            return "No value"
+        }else{
+            return (tField.text!)
         }
     }
     

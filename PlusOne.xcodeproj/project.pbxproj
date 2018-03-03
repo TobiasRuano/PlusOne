@@ -10,9 +10,9 @@
 		8B13340920487FDD00696F44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13340820487FDD00696F44 /* AppDelegate.swift */; };
 		8B13340B20487FDD00696F44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13340A20487FDD00696F44 /* ViewController.swift */; };
 		8B13340E20487FDD00696F44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B13340C20487FDD00696F44 /* Main.storyboard */; };
-		8B13341020487FDD00696F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B13340F20487FDD00696F44 /* Assets.xcassets */; };
 		8B13341320487FDD00696F44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B13341120487FDD00696F44 /* LaunchScreen.storyboard */; };
 		8B13341B2048BB6600696F44 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13341A2048BB6600696F44 /* SettingsViewController.swift */; };
+		8BF8F75E2048E39300CF04DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BF8F75D2048E39300CF04DD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		8B13340820487FDD00696F44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B13340A20487FDD00696F44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B13340D20487FDD00696F44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8B13340F20487FDD00696F44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B13341220487FDD00696F44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B13341420487FDD00696F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B13341A2048BB6600696F44 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8BF8F75D2048E39300CF04DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 				8B13340A20487FDD00696F44 /* ViewController.swift */,
 				8B13341A2048BB6600696F44 /* SettingsViewController.swift */,
 				8B13340C20487FDD00696F44 /* Main.storyboard */,
-				8B13340F20487FDD00696F44 /* Assets.xcassets */,
+				8BF8F75D2048E39300CF04DD /* Assets.xcassets */,
 				8B13341120487FDD00696F44 /* LaunchScreen.storyboard */,
 				8B13341420487FDD00696F44 /* Info.plist */,
 			);
@@ -127,7 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B13341320487FDD00696F44 /* LaunchScreen.storyboard in Resources */,
-				8B13341020487FDD00696F44 /* Assets.xcassets in Resources */,
+				8BF8F75E2048E39300CF04DD /* Assets.xcassets in Resources */,
 				8B13340E20487FDD00696F44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +285,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Trotos.PlusOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Trotos.PlusOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
