@@ -31,18 +31,19 @@ class ViewController: UIViewController {
             myGradientView.StartColor = startColor!
             myGradientView.EndColor = endColor!
         }
+        else {
+            myGradientView.StartColor = UIColor(displayP3Red: 48/255, green: 35/255, blue: 174/255, alpha: 1.0)
+            myGradientView.EndColor = UIColor(displayP3Red: 200/255, green: 109/255, blue: 215/255, alpha: 1.0)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if name == "" {
-            name = user()
-            nameLabel.text = name
+            if numberLabel.text == String(0) {
+                name = user()
+                nameLabel.text = name
+            }
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func PlusButton(_ sender: UIButton) {
@@ -102,7 +103,12 @@ class ViewController: UIViewController {
             
             print("Item : \(String(describing: tField.text))")
             name = tField.text!
-            self.nameLabel.text = name
+            if name != "" {
+             self.nameLabel.text = name
+            }else {
+                name = "🙈"
+                self.nameLabel.text = name
+            }
             
             //Guardo el nombre
 //            UserDefaults.standard.set(self.nombre, forKey: "name")

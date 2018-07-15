@@ -12,6 +12,7 @@
 		8B13340E20487FDD00696F44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B13340C20487FDD00696F44 /* Main.storyboard */; };
 		8B13341320487FDD00696F44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B13341120487FDD00696F44 /* LaunchScreen.storyboard */; };
 		8B13341B2048BB6600696F44 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13341A2048BB6600696F44 /* SettingsViewController.swift */; };
+		8B78F1A5204A32110057B420 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B78F1A4204A32110057B420 /* GradientView.swift */; };
 		8BF8F75E2048E39300CF04DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BF8F75D2048E39300CF04DD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		8B13341220487FDD00696F44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B13341420487FDD00696F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B13341A2048BB6600696F44 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8B78F1A4204A32110057B420 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8BF8F75D2048E39300CF04DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 				8B13340820487FDD00696F44 /* AppDelegate.swift */,
 				8B13340A20487FDD00696F44 /* ViewController.swift */,
 				8B13341A2048BB6600696F44 /* SettingsViewController.swift */,
+				8B78F1A4204A32110057B420 /* GradientView.swift */,
 				8B13340C20487FDD00696F44 /* Main.storyboard */,
 				8BF8F75D2048E39300CF04DD /* Assets.xcassets */,
 				8B13341120487FDD00696F44 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			files = (
 				8B13340B20487FDD00696F44 /* ViewController.swift in Sources */,
 				8B13340920487FDD00696F44 /* AppDelegate.swift in Sources */,
+				8B78F1A5204A32110057B420 /* GradientView.swift in Sources */,
 				8B13341B2048BB6600696F44 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7344G4M3BL;
 				INFOPLIST_FILE = PlusOne/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Trotos.PlusOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7344G4M3BL;
 				INFOPLIST_FILE = PlusOne/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Trotos.PlusOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
