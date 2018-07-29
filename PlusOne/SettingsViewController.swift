@@ -44,73 +44,49 @@ class SettingsViewController: UIViewController {
     func enableButton(value: Int) {
         switch value {
         case 1:
-            colorOneButtonStyle.isEnabled = false
-            colorTwoButtonStyle.isEnabled = true
-            colorThreeButtonStyle.isEnabled = true
-            colorFourButtonStyle.isEnabled = true
-            originalButtonStyle.isEnabled = true
+            buttonIsEnable(colorOneButtonStyle, colorTwoButtonStyle, colorThreeButtonStyle, colorFourButtonStyle, originalButtonStyle)
         case 2:
-            colorOneButtonStyle.isEnabled = true
-            colorTwoButtonStyle.isEnabled = false
-            colorThreeButtonStyle.isEnabled = true
-            colorFourButtonStyle.isEnabled = true
-            originalButtonStyle.isEnabled = true
+            buttonIsEnable(colorTwoButtonStyle, colorOneButtonStyle, colorThreeButtonStyle, colorFourButtonStyle, originalButtonStyle)
         case 3:
-            colorOneButtonStyle.isEnabled = true
-            colorTwoButtonStyle.isEnabled = true
-            colorThreeButtonStyle.isEnabled = false
-            colorFourButtonStyle.isEnabled = true
-            originalButtonStyle.isEnabled = true
+            buttonIsEnable(colorThreeButtonStyle, colorOneButtonStyle, colorTwoButtonStyle, colorFourButtonStyle, originalButtonStyle)
         case 4:
-            colorOneButtonStyle.isEnabled = true
-            colorTwoButtonStyle.isEnabled = true
-            colorThreeButtonStyle.isEnabled = true
-            colorFourButtonStyle.isEnabled = false
-            originalButtonStyle.isEnabled = true
+            buttonIsEnable(colorFourButtonStyle, colorOneButtonStyle, colorTwoButtonStyle, colorThreeButtonStyle, originalButtonStyle)
         default:
-            colorOneButtonStyle.isEnabled = true
-            colorTwoButtonStyle.isEnabled = true
-            colorThreeButtonStyle.isEnabled = true
-            colorFourButtonStyle.isEnabled = true
-            originalButtonStyle.isEnabled = false
+            buttonIsEnable(originalButtonStyle, colorOneButtonStyle, colorTwoButtonStyle, colorThreeButtonStyle, colorFourButtonStyle)
         }
+    }
+    
+    func buttonIsEnable(_ disabled: UIButton, _ enabled1: UIButton, _ enabled2: UIButton, _ enabled3: UIButton, _ enabled4: UIButton) {
+        disabled.isEnabled = false
+        enabled1.isEnabled = true
+        enabled2.isEnabled = true
+        enabled3.isEnabled = true
+        enabled4.isEnabled = true
     }
     
     // Change the background Color
     @IBAction func ColorOneButton(_ sender: UIButton) {
-        myGradientView.StartColor = UIColor(displayP3Red: 128/255, green: 195/255, blue: 243/255, alpha: 1.0)
-        myGradientView.EndColor = UIColor(displayP3Red: 74/255, green: 144/255, blue: 226/255, alpha: 1.0)
-        UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
-        UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
-        enableButton(value: 1)
+        setColorBackground(redStart: 128, greenStart: 195, blueStart: 243, redFinish: 74, greenFinish: 144, blueFinish: 226, value: 1)
     }
     @IBAction func ColorTwoButton(_ sender: UIButton) {
-        myGradientView.StartColor = UIColor(displayP3Red: 181/255, green: 235/255, blue: 69/255, alpha: 1.0)
-        myGradientView.EndColor = UIColor(displayP3Red: 126/255, green: 211/255, blue: 33/255, alpha: 1.0)
-        UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
-        UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
-        enableButton(value: 2)
+        setColorBackground(redStart: 181, greenStart: 235, blueStart: 69, redFinish: 126, greenFinish: 211, blueFinish: 33, value: 2)
     }
     @IBAction func ColorThreeButton(_ sender: UIButton) {
-        myGradientView.StartColor = UIColor(displayP3Red: 224/255, green: 36/255, blue: 242/255, alpha: 1.0)
-        myGradientView.EndColor = UIColor(displayP3Red: 189/255, green: 16/255, blue: 224/255, alpha: 1.0)
-        UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
-        UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
-        enableButton(value: 3)
+        setColorBackground(redStart: 224, greenStart: 36, blueStart: 242, redFinish: 189, greenFinish: 16, blueFinish: 224, value: 3)
     }
     @IBAction func ColorFourButton(_ sender: UIButton) {
-        myGradientView.StartColor = UIColor(displayP3Red: 250/255, green: 217/255, blue: 97/255, alpha: 1.0)
-        myGradientView.EndColor = UIColor(displayP3Red: 247/255, green: 107/255, blue: 28/255, alpha: 1.0)
-        UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
-        UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
-        enableButton(value: 4)
+        setColorBackground(redStart: 250, greenStart: 217, blueStart: 97, redFinish: 247, greenFinish: 107, blueFinish: 28, value: 4)
     }
     @IBAction func OtiginalcolorButton(_ sender: UIButton) {
-        myGradientView.StartColor = UIColor(displayP3Red: 48/255, green: 35/255, blue: 174/255, alpha: 1.0)
-        myGradientView.EndColor = UIColor(displayP3Red: 200/255, green: 109/255, blue: 215/255, alpha: 1.0)
+        setColorBackground(redStart: 48, greenStart: 35, blueStart: 174, redFinish: 200, greenFinish: 109, blueFinish: 215, value: 5)
+    }
+    
+    func setColorBackground(redStart: CGFloat, greenStart: CGFloat, blueStart: CGFloat, redFinish: CGFloat, greenFinish: CGFloat, blueFinish: CGFloat, value: Int) {
+        myGradientView.StartColor = UIColor(displayP3Red: redStart/255, green: greenStart/255, blue: blueStart/255, alpha: 1.0)
+        myGradientView.EndColor = UIColor(displayP3Red: redFinish/255, green: greenFinish/255, blue: blueFinish/255, alpha: 1.0)
         UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
         UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
-        enableButton(value: 5)
+        enableButton(value: value)
     }
     
 }

@@ -25,6 +25,10 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         numberLabel.text = String(counter)
         nameLabel.text = name
+        setBackgroundColor()
+    }
+    
+    func setBackgroundColor() {
         if UserDefaults.standard.value(forKey: "StartColor") != nil {
             let startColor = UserDefaults.standard.colorForKey(key: "StartColor")
             let endColor = UserDefaults.standard.colorForKey(key: "EndColor")
@@ -109,10 +113,6 @@ class ViewController: UIViewController {
                 name = "🙈"
                 self.nameLabel.text = name
             }
-            
-            //Guardo el nombre
-//            UserDefaults.standard.set(self.nombre, forKey: "name")
-            
         }))
         self.present(alert, animated: true, completion: {
             print("completion block")
