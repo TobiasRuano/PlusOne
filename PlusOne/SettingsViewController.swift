@@ -23,8 +23,12 @@ class SettingsViewController: UIViewController {
         if UserDefaults.standard.value(forKey: "StartColor") != nil {
             let startColor = UserDefaults.standard.colorForKey(key: "StartColor")
             let endColor = UserDefaults.standard.colorForKey(key: "EndColor")
+            let value = UserDefaults.standard.value(forKey: "ButtonValue")
             myGradientView.StartColor = startColor!
             myGradientView.EndColor = endColor!
+            enableButton(value: value as! Int)
+        }else {
+            enableButton(value: 5)
         }
     }
     
@@ -77,7 +81,7 @@ class SettingsViewController: UIViewController {
     @IBAction func ColorFourButton(_ sender: UIButton) {
         setColorBackground(redStart: 250, greenStart: 217, blueStart: 97, redFinish: 247, greenFinish: 107, blueFinish: 28, value: 4)
     }
-    @IBAction func OtiginalcolorButton(_ sender: UIButton) {
+    @IBAction func OriginalcolorButton(_ sender: UIButton) {
         setColorBackground(redStart: 48, greenStart: 35, blueStart: 174, redFinish: 200, greenFinish: 109, blueFinish: 215, value: 5)
     }
     
@@ -86,6 +90,7 @@ class SettingsViewController: UIViewController {
         myGradientView.EndColor = UIColor(displayP3Red: redFinish/255, green: greenFinish/255, blue: blueFinish/255, alpha: 1.0)
         UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
         UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
+        UserDefaults.standard.set(value, forKey: "ButtonValue")
         enableButton(value: value)
     }
     
