@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         setBackgroundColor()
     }
     
+    
     func setBackgroundColor() {
         if UserDefaults.standard.value(forKey: "StartColor") != nil {
             let startColor = UserDefaults.standard.colorForKey(key: "StartColor")
@@ -53,20 +54,25 @@ class ViewController: UIViewController {
     @IBAction func PlusButton(_ sender: UIButton) {
         counter += 1
         numberLabel.text = String(counter)
-        //Taptic feedback
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
+        tapticFeedback(value: 1)
     }
     
     @IBAction func MinusButton(_ sender: UIButton) {
         if counter > 0 {
             counter -= 1
             numberLabel.text = String(counter)
-            //Taptic feedback
+            tapticFeedback(value: 1)
+        }else {
+            tapticFeedback(value: 2)
+        }
+    }
+    
+    func tapticFeedback(value: Int) {
+        switch value {
+        case 1:
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.success)
-        }else {
-            //Taptic feedback
+        default:
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.error)
         }
@@ -74,14 +80,13 @@ class ViewController: UIViewController {
     
     func createAlert(tittle: String, message: String){
         
-        let alert = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
         }))
         
         self.present(alert, animated:  true, completion: nil)
     }
-    
     
     func user() -> String {
         var tField: UITextField!
@@ -94,16 +99,10 @@ class ViewController: UIViewController {
             tField = textField
         }
         
-        func handleCancel(alertView: UIAlertAction!)
-        {
-            print("Cancelled !!")
-        }
-        
         let alert = UIAlertController(title: "What do you need to count?", message: "", preferredStyle: .alert)
         
         alert.addTextField(configurationHandler: configurationTextField)
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler:{ (UIAlertAction) in
-            print("Done !!")
             
             print("Item : \(String(describing: tField.text))")
             name = tField.text!
