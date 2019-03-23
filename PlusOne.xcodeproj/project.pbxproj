@@ -12,6 +12,8 @@
 		8B13340E20487FDD00696F44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B13340C20487FDD00696F44 /* Main.storyboard */; };
 		8B13341320487FDD00696F44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B13341120487FDD00696F44 /* LaunchScreen.storyboard */; };
 		8B13341B2048BB6600696F44 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13341A2048BB6600696F44 /* SettingsViewController.swift */; };
+		8B69D76722467EFD00F2F405 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B69D76622467EFD00F2F405 /* CustomView.swift */; };
+		8B69D769224684E100F2F405 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B69D768224684E100F2F405 /* CustomButton.swift */; };
 		8B78F1A5204A32110057B420 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B78F1A4204A32110057B420 /* GradientView.swift */; };
 		8BF8F75E2048E39300CF04DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BF8F75D2048E39300CF04DD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,8 @@
 		8B13341220487FDD00696F44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B13341420487FDD00696F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B13341A2048BB6600696F44 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8B69D76622467EFD00F2F405 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		8B69D768224684E100F2F405 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		8B78F1A4204A32110057B420 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8BF8F75D2048E39300CF04DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +65,8 @@
 				8B13340820487FDD00696F44 /* AppDelegate.swift */,
 				8B13340A20487FDD00696F44 /* ViewController.swift */,
 				8B13341A2048BB6600696F44 /* SettingsViewController.swift */,
+				8B69D76622467EFD00F2F405 /* CustomView.swift */,
+				8B69D768224684E100F2F405 /* CustomButton.swift */,
 				8B78F1A4204A32110057B420 /* GradientView.swift */,
 				8B13340C20487FDD00696F44 /* Main.storyboard */,
 				8BF8F75D2048E39300CF04DD /* Assets.xcassets */,
@@ -143,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B69D76722467EFD00F2F405 /* CustomView.swift in Sources */,
 				8B13340B20487FDD00696F44 /* ViewController.swift in Sources */,
+				8B69D769224684E100F2F405 /* CustomButton.swift in Sources */,
 				8B13340920487FDD00696F44 /* AppDelegate.swift in Sources */,
 				8B78F1A5204A32110057B420 /* GradientView.swift in Sources */,
 				8B13341B2048BB6600696F44 /* SettingsViewController.swift in Sources */,

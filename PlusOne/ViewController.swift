@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet var myGradientView: GradientView!
+    @IBOutlet weak var nameView: CustomView!
+    @IBOutlet weak var numberView: CustomView!
+    @IBOutlet weak var settingsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
