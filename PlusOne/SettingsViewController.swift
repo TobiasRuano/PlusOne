@@ -62,32 +62,41 @@ class SettingsViewController: UIViewController {
     
     func buttonIsEnable(_ disabled: UIButton, _ enabled1: UIButton, _ enabled2: UIButton, _ enabled3: UIButton, _ enabled4: UIButton) {
         disabled.isEnabled = false
+        disabled.isHidden = true
+        
         enabled1.isEnabled = true
+        enabled1.isHidden = false
+        
         enabled2.isEnabled = true
+        enabled2.isHidden = false
+        
         enabled3.isEnabled = true
+        enabled3.isHidden = false
+        
         enabled4.isEnabled = true
+        enabled4.isHidden = false
     }
     
     // Change the background Color
     @IBAction func ColorOneButton(_ sender: UIButton) {
-        setColorBackground(redStart: 128, greenStart: 195, blueStart: 243, redFinish: 74, greenFinish: 144, blueFinish: 226, value: 1)
+        setColorBackground(start: UIColor(named: "BlueStart")!, finish: UIColor(named: "BlueFinish")!, value: 1)
     }
     @IBAction func ColorTwoButton(_ sender: UIButton) {
-        setColorBackground(redStart: 181, greenStart: 235, blueStart: 69, redFinish: 126, greenFinish: 211, blueFinish: 33, value: 2)
+        setColorBackground(start: UIColor(named: "GreenStart")!, finish: UIColor(named: "GreenFinish")!, value: 2)
     }
     @IBAction func ColorThreeButton(_ sender: UIButton) {
-        setColorBackground(redStart: 224, greenStart: 36, blueStart: 242, redFinish: 189, greenFinish: 16, blueFinish: 224, value: 3)
+        setColorBackground(start: UIColor(named: "PinkStart")!, finish: UIColor(named: "PinkFinish")!, value: 3)
     }
     @IBAction func ColorFourButton(_ sender: UIButton) {
-        setColorBackground(redStart: 250, greenStart: 217, blueStart: 97, redFinish: 247, greenFinish: 107, blueFinish: 28, value: 4)
+        setColorBackground(start: UIColor(named: "OrangeStart")!, finish: UIColor(named: "OrangeFinish")!, value: 4)
     }
     @IBAction func OriginalcolorButton(_ sender: UIButton) {
-        setColorBackground(redStart: 48, greenStart: 35, blueStart: 174, redFinish: 200, greenFinish: 109, blueFinish: 215, value: 5)
+        setColorBackground(start: UIColor(named: "VioletStart")!, finish: UIColor(named: "VioletFinish")!, value: 5)
     }
     
-    func setColorBackground(redStart: CGFloat, greenStart: CGFloat, blueStart: CGFloat, redFinish: CGFloat, greenFinish: CGFloat, blueFinish: CGFloat, value: Int) {
-        myGradientView.StartColor = UIColor(displayP3Red: redStart/255, green: greenStart/255, blue: blueStart/255, alpha: 1.0)
-        myGradientView.EndColor = UIColor(displayP3Red: redFinish/255, green: greenFinish/255, blue: blueFinish/255, alpha: 1.0)
+    func setColorBackground(start: UIColor, finish: UIColor, value: Int) {
+        myGradientView.StartColor = start
+        myGradientView.EndColor = finish
         UserDefaults.standard.setColor(color: myGradientView.StartColor, forKey: "StartColor")
         UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
         UserDefaults.standard.set(value, forKey: "ButtonValue")

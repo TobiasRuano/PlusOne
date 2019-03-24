@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -161,57 +162,75 @@
                                 <color key="textColor" red="0.38823529411764707" green="0.74509803921568629" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-DF-Fys">
-                                <rect key="frame" x="-1" y="212.33333333333337" width="377" height="101"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-DF-Fys" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                <rect key="frame" x="30" y="244.33333333333337" width="315" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="377" id="cAv-x9-k05"/>
-                                    <constraint firstAttribute="height" constant="101" id="xVs-OF-4HG"/>
+                                    <constraint firstAttribute="height" constant="50" id="ksb-Tj-c2G"/>
                                 </constraints>
-                                <state key="normal" image="Original Color Rectangle"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                        <color key="value" name="VioletStart"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                        <color key="value" name="VioletFinish"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="OriginalcolorButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="4ze-tH-MEN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py8-H0-lhl">
-                                <rect key="frame" x="-1" y="292.33333333333331" width="377" height="101"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="377" id="7wh-oe-yDk"/>
-                                    <constraint firstAttribute="height" constant="101" id="j49-uR-ZDP"/>
-                                </constraints>
-                                <state key="normal" image="Color 1 Rectangle"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py8-H0-lhl" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                <rect key="frame" x="30" y="314.33333333333331" width="315" height="50"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                        <color key="value" name="BlueStart"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                        <color key="value" name="BlueFinish"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ColorOneButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="AY3-mx-ER2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-Wv-LEs">
-                                <rect key="frame" x="-1" y="372.33333333333331" width="377" height="101"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="Guy-jL-cjd"/>
-                                    <constraint firstAttribute="width" constant="377" id="iDD-c0-dCT"/>
-                                </constraints>
-                                <state key="normal" image="Color 2 Rectangle"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-Wv-LEs" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                <rect key="frame" x="30" y="384.33333333333331" width="315" height="50"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                        <color key="value" name="GreenStart"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                        <color key="value" name="GreenFinish"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ColorTwoButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="ErF-QR-Ffx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guf-is-2xY">
-                                <rect key="frame" x="-1" y="453.33333333333331" width="377" height="100.99999999999994"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="0ob-ms-sSF"/>
-                                    <constraint firstAttribute="width" constant="377" id="nbx-sk-bBb"/>
-                                </constraints>
-                                <state key="normal" image="Color 3 Rectangle"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guf-is-2xY" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                <rect key="frame" x="30" y="454.33333333333331" width="315" height="50"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                        <color key="value" name="PinkFinish"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                        <color key="value" name="PinkStart"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ColorThreeButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="1Ff-e0-GQQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97Y-dN-Z7j">
-                                <rect key="frame" x="-1" y="532.33333333333337" width="377" height="101"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="2bg-WC-tNU"/>
-                                    <constraint firstAttribute="width" constant="377" id="hrB-4u-mFN"/>
-                                </constraints>
-                                <state key="normal" image="Color 4 Rectangle"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97Y-dN-Z7j" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                <rect key="frame" x="30" y="524.33333333333337" width="315" height="50"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                        <color key="value" name="OrangeFinish"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                        <color key="value" name="OrangeStart"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ColorFourButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="tz2-pH-94m"/>
                                 </connections>
@@ -226,25 +245,34 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pgO-y8-CPT" firstAttribute="trailing" secondItem="fey-L3-q4l" secondAttribute="trailing" constant="30" id="569-hC-ySv"/>
+                            <constraint firstItem="97Y-dN-Z7j" firstAttribute="top" secondItem="guf-is-2xY" secondAttribute="bottom" constant="20" id="AGY-tY-eiP"/>
                             <constraint firstItem="ddP-1c-KWf" firstAttribute="leading" secondItem="pgO-y8-CPT" secondAttribute="leading" constant="16" id="BDO-s8-9wI"/>
-                            <constraint firstItem="xLI-DF-Fys" firstAttribute="top" secondItem="pnU-eG-sVD" secondAttribute="bottom" constant="37" id="FwH-kH-afm"/>
+                            <constraint firstItem="py8-H0-lhl" firstAttribute="height" secondItem="xLI-DF-Fys" secondAttribute="height" id="Dn7-UC-CGn"/>
+                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="top" secondItem="py8-H0-lhl" secondAttribute="bottom" constant="20" id="HXt-K7-h4W"/>
                             <constraint firstItem="pnU-eG-sVD" firstAttribute="leading" secondItem="pgO-y8-CPT" secondAttribute="leading" constant="30" id="K9q-GV-BH5"/>
+                            <constraint firstAttribute="trailing" secondItem="97Y-dN-Z7j" secondAttribute="trailing" constant="30" id="NqJ-K7-yfO"/>
                             <constraint firstItem="pgO-y8-CPT" firstAttribute="trailing" secondItem="pnU-eG-sVD" secondAttribute="trailing" constant="30" id="Nyg-Vg-4GZ"/>
-                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="centerX" secondItem="py8-H0-lhl" secondAttribute="centerX" id="P35-Oi-BIm"/>
-                            <constraint firstItem="xLI-DF-Fys" firstAttribute="centerX" secondItem="pnU-eG-sVD" secondAttribute="centerX" id="a2p-Hd-KJ9"/>
+                            <constraint firstItem="pgO-y8-CPT" firstAttribute="trailing" secondItem="xLI-DF-Fys" secondAttribute="trailing" constant="30" id="Pzq-sD-Mm9"/>
+                            <constraint firstAttribute="trailing" secondItem="guf-is-2xY" secondAttribute="trailing" constant="30" id="USH-cD-cl1"/>
+                            <constraint firstItem="py8-H0-lhl" firstAttribute="leading" secondItem="ZBn-2h-XbN" secondAttribute="leading" constant="30" id="XDP-vC-oFt"/>
                             <constraint firstItem="kn1-iH-lMA" firstAttribute="leading" secondItem="pgO-y8-CPT" secondAttribute="leading" constant="16" id="aK1-O0-sSE"/>
                             <constraint firstItem="kn1-iH-lMA" firstAttribute="top" secondItem="pgO-y8-CPT" secondAttribute="top" constant="30" id="adS-6z-TC9"/>
-                            <constraint firstItem="py8-H0-lhl" firstAttribute="centerX" secondItem="xLI-DF-Fys" secondAttribute="centerX" id="bV4-f5-C9d"/>
-                            <constraint firstItem="guf-is-2xY" firstAttribute="centerX" secondItem="5IU-Wv-LEs" secondAttribute="centerX" id="bYw-hU-dmn"/>
+                            <constraint firstAttribute="trailing" secondItem="py8-H0-lhl" secondAttribute="trailing" constant="30" id="buk-FT-eBv"/>
+                            <constraint firstItem="py8-H0-lhl" firstAttribute="top" secondItem="xLI-DF-Fys" secondAttribute="bottom" constant="20" id="cTL-cz-Io7"/>
+                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="leading" secondItem="ZBn-2h-XbN" secondAttribute="leading" constant="30" id="diT-Sg-Kj0"/>
                             <constraint firstItem="pnU-eG-sVD" firstAttribute="centerX" secondItem="pgO-y8-CPT" secondAttribute="centerX" id="do8-sh-HB1"/>
-                            <constraint firstItem="97Y-dN-Z7j" firstAttribute="centerX" secondItem="guf-is-2xY" secondAttribute="centerX" id="ip9-Tj-ksr"/>
-                            <constraint firstItem="guf-is-2xY" firstAttribute="top" secondItem="5IU-Wv-LEs" secondAttribute="bottom" constant="-20" id="j7p-fZ-08a"/>
-                            <constraint firstItem="py8-H0-lhl" firstAttribute="top" secondItem="xLI-DF-Fys" secondAttribute="bottom" constant="-21" id="jQs-xj-F0v"/>
+                            <constraint firstItem="97Y-dN-Z7j" firstAttribute="height" secondItem="guf-is-2xY" secondAttribute="height" id="gFq-l0-2Km"/>
+                            <constraint firstItem="guf-is-2xY" firstAttribute="top" secondItem="5IU-Wv-LEs" secondAttribute="bottom" constant="20" id="gSa-k9-xQr"/>
+                            <constraint firstItem="guf-is-2xY" firstAttribute="height" secondItem="5IU-Wv-LEs" secondAttribute="height" id="jJm-PT-M5s"/>
                             <constraint firstItem="ddP-1c-KWf" firstAttribute="top" secondItem="pnU-eG-sVD" secondAttribute="bottom" constant="20" id="jZH-6g-T8E"/>
-                            <constraint firstItem="97Y-dN-Z7j" firstAttribute="top" secondItem="guf-is-2xY" secondAttribute="bottom" constant="-22" id="jdd-KZ-cnm"/>
-                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="top" secondItem="py8-H0-lhl" secondAttribute="bottom" constant="-21" id="lW7-vd-c1D"/>
+                            <constraint firstItem="xLI-DF-Fys" firstAttribute="top" secondItem="ddP-1c-KWf" secondAttribute="bottom" constant="20" id="kgo-UB-pls"/>
+                            <constraint firstItem="97Y-dN-Z7j" firstAttribute="leading" secondItem="ZBn-2h-XbN" secondAttribute="leading" constant="30" id="kqn-Ya-g9j"/>
                             <constraint firstItem="pnU-eG-sVD" firstAttribute="top" secondItem="kn1-iH-lMA" secondAttribute="bottom" constant="20" id="nhF-Ut-qMx"/>
+                            <constraint firstAttribute="trailing" secondItem="5IU-Wv-LEs" secondAttribute="trailing" constant="30" id="pcn-mE-xdr"/>
                             <constraint firstItem="fey-L3-q4l" firstAttribute="top" secondItem="ZBn-2h-XbN" secondAttribute="top" constant="40" id="r9g-GQ-cJ8"/>
+                            <constraint firstItem="xLI-DF-Fys" firstAttribute="leading" secondItem="pgO-y8-CPT" secondAttribute="leading" constant="30" id="wLD-23-8JB"/>
+                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="height" secondItem="py8-H0-lhl" secondAttribute="height" id="woF-RS-Xuu"/>
+                            <constraint firstItem="guf-is-2xY" firstAttribute="leading" secondItem="ZBn-2h-XbN" secondAttribute="leading" constant="30" id="zHr-IH-W9L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pgO-y8-CPT"/>
                         <userDefinedRuntimeAttributes>
@@ -271,10 +299,35 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Color 1 Rectangle" width="377" height="101"/>
-        <image name="Color 2 Rectangle" width="377" height="101"/>
-        <image name="Color 3 Rectangle" width="377" height="101"/>
-        <image name="Color 4 Rectangle" width="377" height="101"/>
-        <image name="Original Color Rectangle" width="377" height="101"/>
+        <namedColor name="BlueFinish">
+            <color red="0.29019607843137257" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BlueStart">
+            <color red="0.50196078431372548" green="0.76470588235294112" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GreenFinish">
+            <color red="0.49411764705882355" green="0.82745098039215681" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GreenStart">
+            <color red="0.70980392156862748" green="0.92156862745098034" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OrangeFinish">
+            <color red="0.96862745098039216" green="0.41960784313725491" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OrangeStart">
+            <color red="0.98039215686274506" green="0.85098039215686272" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PinkFinish">
+            <color red="0.74117647058823533" green="0.062745098039215685" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PinkStart">
+            <color red="0.8784313725490196" green="0.14117647058823529" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="VioletFinish">
+            <color red="0.18823529411764706" green="0.13725490196078433" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="VioletStart">
+            <color red="0.78431372549019607" green="0.42745098039215684" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

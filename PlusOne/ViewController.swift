@@ -40,8 +40,8 @@ class ViewController: UIViewController {
             myGradientView.EndColor = endColor!
         }
         else {
-            myGradientView.StartColor = UIColor(displayP3Red: 48/255, green: 35/255, blue: 174/255, alpha: 1.0)
-            myGradientView.EndColor = UIColor(displayP3Red: 200/255, green: 109/255, blue: 215/255, alpha: 1.0)
+            myGradientView.StartColor = UIColor(named: "VioletStart")!
+            myGradientView.EndColor = UIColor(named: "VioletFinish")!
         }
     }
     
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func createAlert(tittle: String, message: String){
+    func createAlert(tittle: String, message: String) {
         
         let alert = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertController.Style.alert)
         
@@ -94,9 +94,7 @@ class ViewController: UIViewController {
     func user() -> String {
         var tField: UITextField!
         
-        func configurationTextField(textField: UITextField!)
-        {
-            print("generating the TextField")
+        func configurationTextField(textField: UITextField!) {
             textField.placeholder = "Enter an item"
             textField.textAlignment = .center
             tField = textField
@@ -119,11 +117,10 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: {
             print("completion block")
         })
-        print(name)
         
         if tField.text == nil {
             return "No value"
-        }else{
+        }else {
             return (tField.text!)
         }
     }
