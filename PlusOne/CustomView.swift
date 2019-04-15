@@ -23,8 +23,8 @@ class CustomView: UIView {
     func setStyle() {
         layer.cornerRadius = 10
         layer.shadowColor = UIColor.darkGray.cgColor
-        layer.shadowRadius = 15
-        layer.shadowOpacity = 20
+        layer.shadowRadius = 7
+        layer.shadowOpacity = 10
         layer.shadowOffset = CGSize(width: 0, height: 0)
     }
     

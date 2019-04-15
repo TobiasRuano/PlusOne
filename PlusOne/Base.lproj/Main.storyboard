@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,14 +16,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlusOne" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="PlusOne" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yI-uz-i3f" customClass="CustomView" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="30" y="296" width="260" height="114.5"/>
+                                <rect key="frame" x="30" y="330" width="315" height="138.66666666666663"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYP-nI-aen">
-                                        <rect key="frame" x="47" y="-2.5" width="166" height="119.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HYP-nI-aen">
+                                        <rect key="frame" x="10" y="10.000000000000007" width="295" height="118.66666666666669"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                         <color key="textColor" red="0.38823529411764707" green="0.74509803921568629" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -31,16 +31,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HYP-nI-aen" secondAttribute="trailing" constant="10" id="AgB-fg-EVV"/>
                                     <constraint firstAttribute="width" secondItem="4yI-uz-i3f" secondAttribute="height" multiplier="59:26" id="Hm9-uY-d6d"/>
-                                    <constraint firstItem="HYP-nI-aen" firstAttribute="centerX" secondItem="4yI-uz-i3f" secondAttribute="centerX" id="LlH-K3-PT3"/>
-                                    <constraint firstItem="HYP-nI-aen" firstAttribute="centerY" secondItem="4yI-uz-i3f" secondAttribute="centerY" id="mDW-dP-LGe"/>
+                                    <constraint firstItem="HYP-nI-aen" firstAttribute="top" secondItem="4yI-uz-i3f" secondAttribute="top" constant="10" id="SEr-XR-HkQ"/>
+                                    <constraint firstItem="HYP-nI-aen" firstAttribute="leading" secondItem="4yI-uz-i3f" secondAttribute="leading" constant="10" id="fQG-GH-myN"/>
+                                    <constraint firstAttribute="bottom" secondItem="HYP-nI-aen" secondAttribute="bottom" constant="10" id="uM9-fm-BwR"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fd-dK-8Tc" customClass="CustomButton" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="213" y="20" width="77" height="34"/>
+                                <rect key="frame" x="268" y="54" width="77" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="3fH-CE-Ahd"/>
-                                    <constraint firstAttribute="width" constant="77" id="ckz-As-mVw"/>
+                                    <constraint firstAttribute="width" constant="77" id="WMI-oH-hgo"/>
                                 </constraints>
                                 <state key="normal" title=" Settings "/>
                                 <connections>
@@ -49,10 +51,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5tm-1v-ZUG">
-                                <rect key="frame" x="30" y="503" width="260" height="65"/>
+                                <rect key="frame" x="30" y="693" width="315" height="65"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQx-PR-3ee" customClass="CustomButton" customModule="PlusOne" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="65"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="+"/>
@@ -61,7 +63,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG8-N4-ArG" customClass="CustomButton" customModule="PlusOne" customModuleProvider="target">
-                                        <rect key="frame" x="140" y="0.0" width="120" height="65"/>
+                                        <rect key="frame" x="167.66666666666663" y="0.0" width="147.33333333333337" height="65"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="-"/>
@@ -75,10 +77,10 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u80-Du-OLq" customClass="CustomView" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="30" y="90" width="260" height="106"/>
+                                <rect key="frame" x="30" y="124" width="315" height="106"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWO-wc-bMo">
-                                        <rect key="frame" x="46" y="31.5" width="168" height="43"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LWO-wc-bMo">
+                                        <rect key="frame" x="10" y="10" width="295" height="86"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" red="0.38823529411764707" green="0.74509803921568629" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -86,21 +88,23 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="LWO-wc-bMo" firstAttribute="centerY" secondItem="u80-Du-OLq" secondAttribute="centerY" id="QeJ-DL-EzU"/>
+                                    <constraint firstItem="LWO-wc-bMo" firstAttribute="top" secondItem="u80-Du-OLq" secondAttribute="top" constant="10" id="Lt7-0M-spl"/>
                                     <constraint firstAttribute="height" constant="106" id="UzW-Ru-u6X"/>
-                                    <constraint firstItem="LWO-wc-bMo" firstAttribute="centerX" secondItem="u80-Du-OLq" secondAttribute="centerX" id="iTU-g9-mbQ"/>
+                                    <constraint firstItem="LWO-wc-bMo" firstAttribute="leading" secondItem="u80-Du-OLq" secondAttribute="leading" constant="10" id="aYd-uw-hOB"/>
+                                    <constraint firstAttribute="bottom" secondItem="LWO-wc-bMo" secondAttribute="bottom" constant="10" id="olm-hg-xzw"/>
+                                    <constraint firstAttribute="trailing" secondItem="LWO-wc-bMo" secondAttribute="trailing" constant="10" id="utn-pY-aui"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Fd-dK-8Tc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="43W-St-eUR"/>
+                            <constraint firstItem="6Fd-dK-8Tc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="43W-St-eUR"/>
                             <constraint firstItem="u80-Du-OLq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4pj-w5-gEW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Fd-dK-8Tc" secondAttribute="trailing" constant="30" id="Bbd-2N-S3R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4yI-uz-i3f" secondAttribute="trailing" constant="30" id="DeS-rv-c58"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u80-Du-OLq" secondAttribute="trailing" constant="30" id="MVJ-qW-vZm"/>
-                            <constraint firstItem="5tm-1v-ZUG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Y14-In-XEF"/>
-                            <constraint firstItem="u80-Du-OLq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="YoJ-ZU-e4p"/>
+                            <constraint firstItem="5tm-1v-ZUG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="Y14-In-XEF"/>
+                            <constraint firstItem="u80-Du-OLq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="YoJ-ZU-e4p"/>
                             <constraint firstItem="4yI-uz-i3f" firstAttribute="top" secondItem="u80-Du-OLq" secondAttribute="bottom" constant="100" id="Yow-5k-ACw"/>
                             <constraint firstAttribute="trailing" secondItem="5tm-1v-ZUG" secondAttribute="trailing" constant="30" id="bjb-Lc-Vu8"/>
                             <constraint firstItem="4yI-uz-i3f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="pa0-4Q-Jig"/>
@@ -134,11 +138,11 @@
             <objects>
                 <viewController id="fCm-MB-hZE" customClass="SettingsViewController" customModule="PlusOne" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZBn-2h-XbN" customClass="GradientView" customModule="PlusOne" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnU-eG-sVD" customClass="CustomButton" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="30" y="101.5" width="260" height="50"/>
+                                <rect key="frame" x="30" y="138" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="A43-SJ-Jnd"/>
                                 </constraints>
@@ -148,9 +152,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fey-L3-q4l" customClass="CustomButton" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="213" y="20" width="77" height="34"/>
+                                <rect key="frame" x="268" y="54" width="77" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="77" id="d0i-r5-9nQ"/>
+                                    <constraint firstAttribute="width" constant="77" id="KuG-Vi-kMi"/>
                                     <constraint firstAttribute="height" constant="34" id="nmF-Yz-p25"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
@@ -159,123 +163,131 @@
                                     <action selector="doneButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="uNs-YH-Kyu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Clear All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kn1-iH-lMA">
-                                <rect key="frame" x="16" y="50" width="181" height="31.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <color key="textColor" red="0.38823529411764707" green="0.74509803921568629" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-DF-Fys" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="30" y="230.5" width="260" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ksb-Tj-c2G"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
-                                        <color key="value" name="VioletStart"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
-                                        <color key="value" name="VioletFinish"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="OriginalcolorButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="4ze-tH-MEN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py8-H0-lhl" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="30" y="310.5" width="260" height="50"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
-                                        <color key="value" name="BlueStart"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
-                                        <color key="value" name="BlueFinish"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ColorOneButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="AY3-mx-ER2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-Wv-LEs" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="30" y="390.5" width="260" height="50"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
-                                        <color key="value" name="GreenStart"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
-                                        <color key="value" name="GreenFinish"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ColorTwoButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="ErF-QR-Ffx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guf-is-2xY" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="30" y="470.5" width="260" height="50"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
-                                        <color key="value" name="PinkFinish"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
-                                        <color key="value" name="PinkStart"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ColorThreeButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="1Ff-e0-GQQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97Y-dN-Z7j" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="30" y="550.5" width="260" height="50"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
-                                        <color key="value" name="OrangeFinish"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
-                                        <color key="value" name="OrangeStart"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ColorFourButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="tz2-pH-94m"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change the Background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddP-1c-KWf">
-                                <rect key="frame" x="16" y="171.5" width="271" height="29"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Epu-oB-Ntw">
+                                <rect key="frame" x="62.666666666666657" y="296.66666666666669" width="249.99999999999997" height="210"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="K0Y-a2-mES">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-DF-Fys" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="0f5-NO-hkw"/>
+                                                    <constraint firstAttribute="width" constant="100" id="GRa-gz-DNS"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                                        <color key="value" name="VioletStart"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                                        <color key="value" name="VioletFinish"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="OriginalcolorButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="4ze-tH-MEN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py8-H0-lhl" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="80" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="Omi-r6-Ip2"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                                        <color key="value" name="BlueStart"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                                        <color key="value" name="BlueFinish"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ColorOneButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="AY3-mx-ER2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="py8-H0-lhl" firstAttribute="height" secondItem="xLI-DF-Fys" secondAttribute="height" id="QkN-az-1dK"/>
+                                            <constraint firstItem="py8-H0-lhl" firstAttribute="width" secondItem="xLI-DF-Fys" secondAttribute="width" id="dLX-Or-NYK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-FV-PnG">
+                                        <rect key="frame" x="150" y="0.0" width="100" height="210"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-Wv-LEs" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="AJs-5O-lZV"/>
+                                                    <constraint firstAttribute="height" constant="50" id="AU5-9S-9TI"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                                        <color key="value" name="GreenStart"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                                        <color key="value" name="GreenFinish"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ColorTwoButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="ErF-QR-Ffx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guf-is-2xY" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="80" width="100" height="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                                        <color key="value" name="PinkFinish"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                                        <color key="value" name="PinkStart"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ColorThreeButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="1Ff-e0-GQQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97Y-dN-Z7j" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="160" width="100" height="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                                        <color key="value" name="OrangeFinish"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                                        <color key="value" name="OrangeStart"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ColorFourButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="tz2-pH-94m"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="height" secondItem="guf-is-2xY" secondAttribute="height" id="2fd-Pw-LiS"/>
+                                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="width" secondItem="guf-is-2xY" secondAttribute="width" id="Lk4-Vx-Kqq"/>
+                                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="height" secondItem="97Y-dN-Z7j" secondAttribute="height" id="tsw-7A-wup"/>
+                                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="width" secondItem="97Y-dN-Z7j" secondAttribute="width" id="uxt-Lk-KWq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change the Background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ddP-1c-KWf">
+                                <rect key="frame" x="30" y="238" width="315" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" red="0.38823529411764707" green="0.74509803921568629" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pgO-y8-CPT" firstAttribute="trailing" secondItem="fey-L3-q4l" secondAttribute="trailing" constant="30" id="569-hC-ySv"/>
-                            <constraint firstItem="97Y-dN-Z7j" firstAttribute="top" secondItem="guf-is-2xY" secondAttribute="bottom" constant="30" id="AGY-tY-eiP"/>
-                            <constraint firstItem="ddP-1c-KWf" firstAttribute="leading" secondItem="pgO-y8-CPT" secondAttribute="leading" constant="16" id="BDO-s8-9wI"/>
-                            <constraint firstItem="py8-H0-lhl" firstAttribute="height" secondItem="xLI-DF-Fys" secondAttribute="height" id="Dn7-UC-CGn"/>
-                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="top" secondItem="py8-H0-lhl" secondAttribute="bottom" constant="30" id="HXt-K7-h4W"/>
+                            <constraint firstItem="Epu-oB-Ntw" firstAttribute="centerX" secondItem="ZBn-2h-XbN" secondAttribute="centerX" id="6B1-yW-7yK"/>
+                            <constraint firstItem="ddP-1c-KWf" firstAttribute="leading" secondItem="pgO-y8-CPT" secondAttribute="leading" constant="30" id="BDO-s8-9wI"/>
                             <constraint firstItem="pnU-eG-sVD" firstAttribute="leading" secondItem="pgO-y8-CPT" secondAttribute="leading" constant="30" id="K9q-GV-BH5"/>
-                            <constraint firstAttribute="trailing" secondItem="97Y-dN-Z7j" secondAttribute="trailing" constant="30" id="NqJ-K7-yfO"/>
+                            <constraint firstItem="Epu-oB-Ntw" firstAttribute="top" secondItem="ddP-1c-KWf" secondAttribute="bottom" constant="30" id="MGP-kI-3Mt"/>
                             <constraint firstItem="pgO-y8-CPT" firstAttribute="trailing" secondItem="pnU-eG-sVD" secondAttribute="trailing" constant="30" id="Nyg-Vg-4GZ"/>
-                            <constraint firstItem="pgO-y8-CPT" firstAttribute="trailing" secondItem="xLI-DF-Fys" secondAttribute="trailing" constant="30" id="Pzq-sD-Mm9"/>
-                            <constraint firstAttribute="trailing" secondItem="guf-is-2xY" secondAttribute="trailing" constant="30" id="USH-cD-cl1"/>
-                            <constraint firstItem="py8-H0-lhl" firstAttribute="leading" secondItem="ZBn-2h-XbN" secondAttribute="leading" constant="30" id="XDP-vC-oFt"/>
-                            <constraint firstItem="kn1-iH-lMA" firstAttribute="leading" secondItem="pgO-y8-CPT" secondAttribute="leading" constant="16" id="aK1-O0-sSE"/>
-                            <constraint firstItem="kn1-iH-lMA" firstAttribute="top" secondItem="pgO-y8-CPT" secondAttribute="top" constant="30" id="adS-6z-TC9"/>
-                            <constraint firstAttribute="trailing" secondItem="py8-H0-lhl" secondAttribute="trailing" constant="30" id="buk-FT-eBv"/>
-                            <constraint firstItem="py8-H0-lhl" firstAttribute="top" secondItem="xLI-DF-Fys" secondAttribute="bottom" constant="30" id="cTL-cz-Io7"/>
-                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="leading" secondItem="ZBn-2h-XbN" secondAttribute="leading" constant="30" id="diT-Sg-Kj0"/>
-                            <constraint firstItem="pnU-eG-sVD" firstAttribute="centerX" secondItem="pgO-y8-CPT" secondAttribute="centerX" id="do8-sh-HB1"/>
-                            <constraint firstItem="97Y-dN-Z7j" firstAttribute="height" secondItem="guf-is-2xY" secondAttribute="height" id="gFq-l0-2Km"/>
-                            <constraint firstItem="guf-is-2xY" firstAttribute="top" secondItem="5IU-Wv-LEs" secondAttribute="bottom" constant="30" id="gSa-k9-xQr"/>
-                            <constraint firstItem="guf-is-2xY" firstAttribute="height" secondItem="5IU-Wv-LEs" secondAttribute="height" id="jJm-PT-M5s"/>
-                            <constraint firstItem="ddP-1c-KWf" firstAttribute="top" secondItem="pnU-eG-sVD" secondAttribute="bottom" constant="20" id="jZH-6g-T8E"/>
-                            <constraint firstItem="xLI-DF-Fys" firstAttribute="top" secondItem="ddP-1c-KWf" secondAttribute="bottom" constant="30" id="kgo-UB-pls"/>
-                            <constraint firstItem="97Y-dN-Z7j" firstAttribute="leading" secondItem="ZBn-2h-XbN" secondAttribute="leading" constant="30" id="kqn-Ya-g9j"/>
-                            <constraint firstItem="pnU-eG-sVD" firstAttribute="top" secondItem="kn1-iH-lMA" secondAttribute="bottom" constant="20" id="nhF-Ut-qMx"/>
-                            <constraint firstAttribute="trailing" secondItem="5IU-Wv-LEs" secondAttribute="trailing" constant="30" id="pcn-mE-xdr"/>
-                            <constraint firstItem="fey-L3-q4l" firstAttribute="top" secondItem="pgO-y8-CPT" secondAttribute="top" id="r9g-GQ-cJ8"/>
-                            <constraint firstItem="xLI-DF-Fys" firstAttribute="leading" secondItem="pgO-y8-CPT" secondAttribute="leading" constant="30" id="wLD-23-8JB"/>
-                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="height" secondItem="py8-H0-lhl" secondAttribute="height" id="woF-RS-Xuu"/>
-                            <constraint firstItem="guf-is-2xY" firstAttribute="leading" secondItem="ZBn-2h-XbN" secondAttribute="leading" constant="30" id="zHr-IH-W9L"/>
+                            <constraint firstItem="pnU-eG-sVD" firstAttribute="top" secondItem="fey-L3-q4l" secondAttribute="bottom" constant="50" id="hhj-C0-bOg"/>
+                            <constraint firstItem="ddP-1c-KWf" firstAttribute="top" secondItem="pnU-eG-sVD" secondAttribute="bottom" constant="50" id="jZH-6g-T8E"/>
+                            <constraint firstItem="pgO-y8-CPT" firstAttribute="trailing" secondItem="ddP-1c-KWf" secondAttribute="trailing" constant="30" id="qVt-TP-ZrN"/>
+                            <constraint firstItem="fey-L3-q4l" firstAttribute="top" secondItem="pgO-y8-CPT" secondAttribute="top" constant="10" id="r9g-GQ-cJ8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pgO-y8-CPT"/>
                         <userDefinedRuntimeAttributes>
@@ -298,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bN-du-EnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.79999999999995" y="133.5832083958021"/>
+            <point key="canvasLocation" x="903.75" y="133.09859154929578"/>
         </scene>
     </scenes>
     <resources>

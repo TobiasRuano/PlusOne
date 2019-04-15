@@ -39,9 +39,7 @@ class SettingsViewController: UIViewController {
     @IBAction func resetButton(_ sender: UIButton) {
         counter = 0
         name = ""
-        //Taptic feedback
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
+        TapticEffectsService.performFeedbackNotification(type: .success)
         self.dismiss(animated: true, completion: nil)
     }
     

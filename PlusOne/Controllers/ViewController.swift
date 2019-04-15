@@ -57,27 +57,16 @@ class ViewController: UIViewController {
     @IBAction func PlusButton(_ sender: UIButton) {
         counter += 1
         numberLabel.text = String(counter)
-        tapticFeedback(value: 1)
+        TapticEffectsService.performFeedbackImpact(style: .light)
     }
     
     @IBAction func MinusButton(_ sender: UIButton) {
         if counter > 0 {
             counter -= 1
             numberLabel.text = String(counter)
-            tapticFeedback(value: 1)
+            TapticEffectsService.performFeedbackImpact(style: .light)
         }else {
-            tapticFeedback(value: 2)
-        }
-    }
-    
-    func tapticFeedback(value: Int) {
-        switch value {
-        case 1:
-            let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(.success)
-        default:
-            let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(.error)
+            TapticEffectsService.performFeedbackNotification(type: .warning)
         }
     }
     
@@ -85,7 +74,7 @@ class ViewController: UIViewController {
         
         let alert = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in alert.dismiss(animated: true)
         }))
         
         self.present(alert, animated:  true, completion: nil)
@@ -114,9 +103,7 @@ class ViewController: UIViewController {
                 self.nameLabel.text = name
             }
         }))
-        self.present(alert, animated: true, completion: {
-            print("completion block")
-        })
+        self.present(alert, animated: true)
         
         if tField.text == nil {
             return "No value"
