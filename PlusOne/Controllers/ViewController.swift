@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         numberLabel.text = String(counter)
+        settingsButton.backgroundColor = .clear
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,6 +86,7 @@ class ViewController: UIViewController {
         
         func configurationTextField(textField: UITextField!) {
             textField.placeholder = "Enter an item"
+            textField.autocapitalizationType = .sentences
             textField.textAlignment = .center
             tField = textField
         }
@@ -98,7 +100,7 @@ class ViewController: UIViewController {
             name = tField.text!
             if name != "" {
              self.nameLabel.text = name
-            }else {
+            } else {
                 name = "🙈"
                 self.nameLabel.text = name
             }

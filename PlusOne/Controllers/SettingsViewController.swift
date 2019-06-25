@@ -60,7 +60,6 @@ class SettingsViewController: UIViewController {
     
     func buttonIsEnable(_ disabled: UIButton, _ enabled1: UIButton, _ enabled2: UIButton, _ enabled3: UIButton, _ enabled4: UIButton) {
         disabled.isEnabled = false
-        disabled.isHidden = true
         
         enabled1.isEnabled = true
         enabled1.isHidden = false
@@ -99,6 +98,7 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.setColor(color: myGradientView.EndColor, forKey: "EndColor")
         UserDefaults.standard.set(value, forKey: "ButtonValue")
         enableButton(value: value)
+        TapticEffectsService.performFeedbackNotification(type: .success)
     }
     
 }

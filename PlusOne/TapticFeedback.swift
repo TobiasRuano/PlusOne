@@ -11,8 +11,6 @@ import AudioToolbox.AudioServices
 
 class TapticEffectsService {
     
-    // MARK: Public type methods - Haptic Feedback
-    
     /// Performs haptic feedback - impact.
     static func performFeedbackImpact(style: UIImpactFeedbackGenerator.FeedbackStyle) {
         if #available(iOS 10.0, *) {

@@ -39,12 +39,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fd-dK-8Tc" customClass="CustomButton" customModule="PlusOne" customModuleProvider="target">
-                                <rect key="frame" x="268" y="54" width="77" height="34"/>
+                                <rect key="frame" x="311" y="54" width="34" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="3fH-CE-Ahd"/>
-                                    <constraint firstAttribute="width" constant="77" id="WMI-oH-hgo"/>
+                                    <constraint firstAttribute="width" constant="34" id="WMI-oH-hgo"/>
                                 </constraints>
-                                <state key="normal" title=" Settings "/>
+                                <state key="normal" backgroundImage="settings"/>
                                 <connections>
                                     <action selector="settingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgQ-4d-EQb"/>
                                     <segue destination="fCm-MB-hZE" kind="show" identifier="segue" id="xq1-he-ifS"/>
@@ -163,90 +163,107 @@
                                     <action selector="doneButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="uNs-YH-Kyu"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Epu-oB-Ntw">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Epu-oB-Ntw">
                                 <rect key="frame" x="62.666666666666657" y="296.66666666666669" width="249.99999999999997" height="210"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="K0Y-a2-mES">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="g9U-JY-xmq">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="130"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-DF-Fys" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="K0Y-a2-mES">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-DF-Fys" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="0f5-NO-hkw"/>
+                                                            <constraint firstAttribute="width" constant="100" id="GRa-gz-DNS"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                                                <color key="value" name="VioletStart"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                                                <color key="value" name="VioletFinish"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="OriginalcolorButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="4ze-tH-MEN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py8-H0-lhl" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="80" width="100" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="Omi-r6-Ip2"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                                                <color key="value" name="BlueStart"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                                                <color key="value" name="BlueFinish"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="ColorOneButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="AY3-mx-ER2"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="0f5-NO-hkw"/>
-                                                    <constraint firstAttribute="width" constant="100" id="GRa-gz-DNS"/>
+                                                    <constraint firstItem="py8-H0-lhl" firstAttribute="height" secondItem="xLI-DF-Fys" secondAttribute="height" id="QkN-az-1dK"/>
+                                                    <constraint firstItem="py8-H0-lhl" firstAttribute="width" secondItem="xLI-DF-Fys" secondAttribute="width" id="dLX-Or-NYK"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
-                                                        <color key="value" name="VioletStart"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
-                                                        <color key="value" name="VioletFinish"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="OriginalcolorButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="4ze-tH-MEN"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py8-H0-lhl" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="80" width="100" height="50"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-FV-PnG">
+                                                <rect key="frame" x="150" y="0.0" width="100" height="130"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-Wv-LEs" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="AJs-5O-lZV"/>
+                                                            <constraint firstAttribute="height" constant="50" id="AU5-9S-9TI"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                                                <color key="value" name="GreenStart"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                                                <color key="value" name="GreenFinish"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="ColorTwoButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="ErF-QR-Ffx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guf-is-2xY" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="80" width="100" height="50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
+                                                                <color key="value" name="PinkFinish"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
+                                                                <color key="value" name="PinkStart"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="ColorThreeButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="1Ff-e0-GQQ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="Omi-r6-Ip2"/>
+                                                    <constraint firstItem="5IU-Wv-LEs" firstAttribute="height" secondItem="guf-is-2xY" secondAttribute="height" id="2fd-Pw-LiS"/>
+                                                    <constraint firstItem="5IU-Wv-LEs" firstAttribute="width" secondItem="guf-is-2xY" secondAttribute="width" id="Lk4-Vx-Kqq"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
-                                                        <color key="value" name="BlueStart"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
-                                                        <color key="value" name="BlueFinish"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="ColorOneButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="AY3-mx-ER2"/>
-                                                </connections>
-                                            </button>
+                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="py8-H0-lhl" firstAttribute="height" secondItem="xLI-DF-Fys" secondAttribute="height" id="QkN-az-1dK"/>
-                                            <constraint firstItem="py8-H0-lhl" firstAttribute="width" secondItem="xLI-DF-Fys" secondAttribute="width" id="dLX-Or-NYK"/>
-                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-FV-PnG">
-                                        <rect key="frame" x="150" y="0.0" width="100" height="210"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="y4E-r7-Gyi">
+                                        <rect key="frame" x="0.0" y="160" width="250" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-Wv-LEs" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="AJs-5O-lZV"/>
-                                                    <constraint firstAttribute="height" constant="50" id="AU5-9S-9TI"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
-                                                        <color key="value" name="GreenStart"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
-                                                        <color key="value" name="GreenFinish"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="ColorTwoButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="ErF-QR-Ffx"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guf-is-2xY" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="80" width="100" height="50"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
-                                                        <color key="value" name="PinkFinish"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="StartColor">
-                                                        <color key="value" name="PinkStart"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="ColorThreeButton:" destination="fCm-MB-hZE" eventType="touchUpInside" id="1Ff-e0-GQQ"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97Y-dN-Z7j" customClass="CustomGradientButton" customModule="PlusOne" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="160" width="100" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="hd8-oA-KpS"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="EndColor">
                                                         <color key="value" name="OrangeFinish"/>
@@ -260,14 +277,12 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="height" secondItem="guf-is-2xY" secondAttribute="height" id="2fd-Pw-LiS"/>
-                                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="width" secondItem="guf-is-2xY" secondAttribute="width" id="Lk4-Vx-Kqq"/>
-                                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="height" secondItem="97Y-dN-Z7j" secondAttribute="height" id="tsw-7A-wup"/>
-                                            <constraint firstItem="5IU-Wv-LEs" firstAttribute="width" secondItem="97Y-dN-Z7j" secondAttribute="width" id="uxt-Lk-KWq"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="y4E-r7-Gyi" firstAttribute="leading" secondItem="Epu-oB-Ntw" secondAttribute="leading" id="4HE-q9-ucd"/>
+                                    <constraint firstAttribute="trailing" secondItem="y4E-r7-Gyi" secondAttribute="trailing" id="RbC-Kf-njX"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change the Background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ddP-1c-KWf">
                                 <rect key="frame" x="30" y="238" width="315" height="28.666666666666686"/>
@@ -314,6 +329,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="settings" width="256" height="256"/>
         <namedColor name="BlueFinish">
             <color red="0.29019607843137257" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
